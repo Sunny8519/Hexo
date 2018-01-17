@@ -1,7 +1,11 @@
 ---
 title: Hexo+Github搭建个人博客
-date: 2018-01-16 21:29:50
+date: 2018-01-17
+categories: Hexo
+author: MinHow
 tags:
+    - Hexo
+cover_picture: http://upload-images.jianshu.io/upload_images/5231076-3385be91b57dabf4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 ---
 #### 1.安装Node.js
 Windows下安装Node.js还是比较简单的，直接去[官网下载](https://nodejs.org/en/ "官网下载")安装即可，不需要任何其他的配置。
