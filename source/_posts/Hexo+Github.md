@@ -2,15 +2,17 @@
 title: Hexo+Github搭建个人博客
 date: 2018-01-17
 categories: Hexo
-author: MinHow
+author: Sunny
 tags:
     - Hexo
 cover_picture: http://upload-images.jianshu.io/upload_images/5231076-3385be91b57dabf4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 ---
-#### 1.安装Node.js
+![header.png](http://upload-images.jianshu.io/upload_images/5231076-3385be91b57dabf4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#### 安装Node.js
 Windows下安装Node.js还是比较简单的，直接去[官网下载](https://nodejs.org/en/ "官网下载")安装即可，不需要任何其他的配置。
 
-#### 2.安装Git
+#### 安装Git
 根据自己电脑的参数去[Git官网](https://git-scm.com/download/win "Git官网")下载安装对应的版本即可，安装完成之后，在cmd命令窗下输入`git version`，有输出Git版本号则说明安装成功。
 
 **配置SSH Key**
@@ -49,7 +51,7 @@ $ ssh -T git@github.com
 Hi Sunny8519! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-#### 3.安装和初始化Hexo
+#### 安装和初始化Hexo
 第一步：
 全局安装Hexo:`npm install -g hexo`
 
@@ -83,9 +85,38 @@ theme: yilia
 $ hexo g
 $ hexo s
 ```
-打开浏览器输入`localhost:4000`就能看到我们新设置的主题了，然后接下来的主题功能配置可以到发布者的Github上详细了解。
+打开浏览器输入`localhost:4000`就能看到我们新设置的主题了，接下来主题功能的具体配置可以到发布者的Github上详细了解。
 
-当我们觉得主题和需要的功能配置的差不多了，就可以部署到Github上了，在部署之前我们还需要在Github上新建一个仓库用来存放hexo
+到这里，本地博客的搭建就基本完毕了，接下来就是要把我们的博客部署到Github上。
 
-#### 常用的Linux命令行
-回到上级目录：`cd ..`
+第一步：在Github上建立如下仓库：
+![建立仓库](http://upload-images.jianshu.io/upload_images/5231076-030e31bb8eb87f76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+但是要注意的是仓库的名称由你的Github用户名+github+io组成，如图中所示，因为这个名称就是你博客搭建完毕后访问的首页地址（图中报红是因为我已经搭建了这个仓库）。
+
+第二步：仓库创建完之后，我们需要把仓库的地址设置到Hexo文件夹下的`_config.yml`文件中，如图所示：
+
+![copy_address.png](http://upload-images.jianshu.io/upload_images/5231076-ac97e20ff02f2365.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+把地址按照如下方式设置：
+```
+deploy:
+  type: git
+  repo: git@github.com:Sunny8519/sunny8519.github.io.git
+  branch: master
+```
+保存好了之后，我们在Hexo文件夹下右键打开Git Bash命令窗口，安装hexo-deployer-git自动部署发布工具：
+```
+$ npm install hexo-deployer-git  --save
+```
+到这儿所有工作都准备好了，我们继续在命令窗口中输入如下三条命令就能把本地博客系统部署到Github上了：
+```
+$ hexo clean
+$ hexo g
+$ hexo d
+```
+然后打开浏览器输入你的`Github用户名.github.io`就能够访问你的博客首页了。
+
+#### 参考
+[搭建个人博客-hexo+github详细完整步骤](https://www.jianshu.com/p/189fd945f38f)
+
+[MiHo-主题安装和配置详情](https://blog.minhow.com/2017/08/01/blog/installation-configuration/)
