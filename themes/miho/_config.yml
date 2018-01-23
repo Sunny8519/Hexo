@@ -2,12 +2,12 @@
 # https://github.com/wongminho/hexo-theme-miho
 
 # Favicon of your site | 网站icon
-favicon: images/logo.png
+favicon: /logo.png
 
 # Header
 
 # Keywords of your site | 网站关键字
-keywords: Sunny,Sunny's Blog
+keywords: Android技术博客,Android,个人博客
 # Head headline | 头部标题
 header_title: Sunny's Blog
 # Head description | 头部描述
@@ -72,13 +72,13 @@ excerpt_length: 190
 # Excerpt link | 摘录链接
 excerpt_link: more>>
 # New window open link | 新窗口打开文章
-open_new_link: false
+open_new_link: true
 # Article default cover picture，size：350*150 | 文章默认封面图，尺寸：350*150
 cover_picture: images/banner.jpg
 # Open background particles | 开启背景粒子
 open_bg_particle: true
 # Open animation in homepage and head | 开启主页及头部动画
-open_animation: true
+open_animation: false
 
 # Article
 
