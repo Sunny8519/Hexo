@@ -10,7 +10,7 @@ cover_picture: http://upload-images.jianshu.io/upload_images/5231076-cca20551d7c
 ![belle_1.jpg](http://upload-images.jianshu.io/upload_images/5231076-cca20551d7c949e4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 1.AutoCompleteTextView的基本用法
-```
+```java
 //待匹配的字符串
 private String[] res = new String[]{"shanghai1", "shanghai2", "beijing1", "beijing2", "tianjin"};
 //创建适配器
@@ -32,7 +32,7 @@ this.binding.txtAutoComplete.setAdapter(adapter);
 </div>
 
 #### 2.MultiAutoCompleteTextView的基本用法
-```
+```java
 //待匹配的邮件字符串
 private String[] emailRes = new String[]{"sdjfjie@qq.com", "djifgieh@gmail.com"};
 //创建适配器
